@@ -27,7 +27,7 @@ def train_model(df):
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
     preds = model.predict(X_test)
-    accuracy = accuracy_score(y_test, 1 - preds)
+    accuracy = accuracy_score(y_test, preds)
     return model, accuracy
 
 
